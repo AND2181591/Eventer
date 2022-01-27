@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+body {
+    --bkg-color: rgb(255, 255, 255);
+}
+
+body.dark-theme {
+    --bkg-color: rgb(41, 41, 41);
+}
+
+body {
+    background: var(--bkg-color);
+}
