@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MaterialModule } from '../material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { SignInComponent } from './sign-in/sign-in.component';
@@ -23,6 +24,7 @@ import { AuthLinkComponent } from './shared/auth-link/auth-link.component';
     CommonModule,
     MaterialModule, 
     FlexLayoutModule, 
+    ReactiveFormsModule, 
     AuthRoutingModule, 
   ]
 })

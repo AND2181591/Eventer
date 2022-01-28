@@ -1,8 +1,10 @@
-<div class="container" (click)="selected = true">
-    <h5 [ngClass]="{'label-rise': selected}">{{ label }}</h5>
+<div class="container" (click)="onSelect()">
+    <h5 [ngClass]="{'label-rise': selected || control.value}">{{ label }}</h5>
     <input 
-        [ngClass]="{'input-select': selected}"
-        (focus)="selected = true"
-        (blur)="selected = false"
-        [type]="type">
+        [formControl]="control"
+        [type]="type"
+        [ngClass]="{'input-select': selected || control.value}"
+        (focus)="onSelect()"
+        (blur)="selected = false" 
+        #input>
 </div>

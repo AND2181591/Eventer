@@ -1,13 +1,16 @@
 <app-auth-card cardTitle="Sign Up">
-    <form>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
         <div class="input-container">
             <app-auth-input 
+                [control]="signupForm.get('email')"
                 label="Email" 
                 type="text"></app-auth-input>
             <app-auth-input 
+                [control]="signupForm.get('password')"
                 label="Password" 
                 type="password"></app-auth-input>
             <app-auth-input 
+                [control]="signupForm.get('confirmPassword')"
                 label="Confirm Password" 
                 type="password"></app-auth-input>
         </div>
