@@ -1,6 +1,6 @@
 mat-card {
     width: 225px;
-    padding: 50px 16px;
+    padding: 30px 16px 20px;
     background: #ffeba0;
     animation: card-appear 1s ease-out;
 }

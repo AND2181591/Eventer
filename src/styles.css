@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300&family=Kanit:wght@300&display=swap');
+
 body {
     --bkg-color: linear-gradient(120deg, rgba(161,255,221,1) 20%, rgba(45,176,255,1) 53%, rgba(167,223,255,1) 80%);
 }
@@ -11,11 +13,14 @@ body.dark-theme {
 
 * {
     box-sizing: border-box;
+    font-family: 'Kanit' /* Replace with your custom font */, sans-serif !important; 
+        /* Add !important to overwrite all elements */
 }
 
 body,html {
     margin: 0;
     padding: 0;
+    font-family: 'Tangerine', serif;
 }
 
 body {

@@ -1,7 +1,8 @@
 <div class="container" (click)="selected = true">
-    <h5>{{ label }}</h5>
+    <h5 [ngClass]="{'label-rise': selected}">{{ label }}</h5>
     <input 
         [ngClass]="{'input-select': selected}"
+        (focus)="selected = true"
         (blur)="selected = false"
         [type]="type">
 </div>

@@ -8,6 +8,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AuthInputComponent } from './shared/auth-input/auth-input.component';
 import { AuthCardComponent } from './shared/auth-card/auth-card.component';
+import { AuthLinkComponent } from './shared/auth-link/auth-link.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { AuthCardComponent } from './shared/auth-card/auth-card.component';
     SignInComponent,
     SignUpComponent,
     AuthInputComponent,
-    AuthCardComponent
+    AuthCardComponent,
+    AuthLinkComponent
   ],
   imports: [
     CommonModule,

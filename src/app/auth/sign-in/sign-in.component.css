@@ -1,6 +1,7 @@
 :host, form {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 :host {
@@ -8,12 +9,8 @@
     height: 100vh;
 }
 
-form {
-    flex-direction: column;
-}
-
 .input-container {
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .btn-container {
@@ -24,4 +21,5 @@ form {
 
 button {
     background: #91ffcc;
+    font-weight: 600;
 }

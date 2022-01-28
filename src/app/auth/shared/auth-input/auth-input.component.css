@@ -5,17 +5,20 @@
 h5 {
     margin: 0;
     position: absolute;
-    top: 12px;
-    left: 7px;
+    top: 7px;
+    left: 8px;
+    color: #396885;
+    transition: top .2s;
 }
 
 input {
     width: 100%;
-    margin: 5px 0;
-    padding: 6px;
-    border-radius: 4px;
+    margin: 0 0 10px;
+    padding: 8px;
+    border-radius: 10px;
     border: none;
-    transition: padding .2s;
+    background: #f4fffa;
+    transition: background .2s, padding .2s, margin .2s;
 }
 
 input:focus {
@@ -23,5 +26,10 @@ input:focus {
 }
 
 .input-select {
-    padding: 24px 8px 10px;
+    background: #91ffcc;
+    margin: 10px 0 10px;
+}
+
+.label-rise {
+    top: -10px;
 }

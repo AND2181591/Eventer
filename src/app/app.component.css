@@ -1,0 +1,21 @@
+.header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+}
+
+.header h1 {
+    font-weight: 100;
+    text-align: center;
+    color: #1d2c34;
+    animation: appear 1s ease-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
