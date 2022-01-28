@@ -1,0 +1,27 @@
+:host, form {
+    display: flex;
+    justify-content: center;
+}
+
+:host {
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    flex-direction: column;
+}
+
+.input-container {
+    margin: 20px 0;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+}
+
+button {
+    background: #91ffcc;
+}

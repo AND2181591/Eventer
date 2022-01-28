@@ -1,19 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { AuthInputComponent } from './shared/auth-input/auth-input.component';
+import { AuthCardComponent } from './shared/auth-card/auth-card.component';
 
 
 @NgModule({
   declarations: [
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    AuthInputComponent,
+    AuthCardComponent
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    MaterialModule, 
+    FlexLayoutModule, 
+    AuthRoutingModule, 
   ]
 })
 export class AuthModule { }

@@ -1,1 +1,16 @@
-<p>sign-in works!</p>
+<app-auth-card cardTitle="Sign In">
+    <form>
+        <div class="input-container">
+            <app-auth-input 
+                label="Email" 
+                type="text"></app-auth-input>
+            <app-auth-input 
+                label="Password" 
+                type="password"></app-auth-input>
+        </div>
+        
+        <div class="btn-container">
+            <button mat-raised-button type="submit">Submit</button>
+        </div>
+    </form>
+</app-auth-card>

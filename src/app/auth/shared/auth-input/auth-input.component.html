@@ -1,0 +1,7 @@
+<div class="container" (click)="selected = true">
+    <h5>{{ label }}</h5>
+    <input 
+        [ngClass]="{'input-select': selected}"
+        (blur)="selected = false"
+        [type]="type">
+</div>
