@@ -12,7 +12,7 @@
         </div>
         
         <div class="btn-container">
-            <button mat-raised-button type="submit">Submit</button>
+            <button [disabled]="!signinForm.valid" mat-raised-button type="submit">Submit</button>
         </div>
     </form>
     <app-auth-link [signup]="false"></app-auth-link>

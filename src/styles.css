@@ -13,8 +13,7 @@ body.dark-theme {
 
 * {
     box-sizing: border-box;
-    font-family: 'Kanit' /* Replace with your custom font */, sans-serif !important; 
-        /* Add !important to overwrite all elements */
+    font-family: 'Kanit', sans-serif !important;
 }
 
 body,html {

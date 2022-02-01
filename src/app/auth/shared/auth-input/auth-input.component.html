@@ -1,9 +1,17 @@
 <div class="container" (click)="onSelect()">
-    <h5 [ngClass]="{'label-rise': selected || control.value}">{{ label }}</h5>
+    <h5 [ngClass]="{'label-rise': selected || control.value, 'label-error': errorControls()}">
+        {{ label }} 
+        <ng-container class="error-container" *ngIf="errorControls()">
+            <span *ngIf="control.errors.required">Required</span>
+            <span *ngIf="control.errors.email">Format Needed</span>
+            <span *ngIf="control.errors.minlength">(min. {{ control.errors.minlength.requiredLength }} chars)</span>
+            <span *ngIf="control.errors.maxlength">(max. {{ control.errors.maxlength.requiredLength }} chars)</span>
+        </ng-container>
+    </h5>
     <input 
         [formControl]="control"
         [type]="type"
-        [ngClass]="{'input-select': selected || control.value}"
+        [ngClass]="{'input-select': selected || control.value, 'input-error': errorControls()}"
         (focus)="onSelect()"
         (blur)="selected = false" 
         #input>

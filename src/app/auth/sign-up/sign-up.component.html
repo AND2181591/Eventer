@@ -11,12 +11,12 @@
                 type="password"></app-auth-input>
             <app-auth-input 
                 [control]="signupForm.get('confirmPassword')"
-                label="Confirm Password" 
+                label="Confirm Pass" 
                 type="password"></app-auth-input>
         </div>
         
         <div class="btn-container">
-            <button mat-raised-button type="submit">Submit</button>
+            <button [disabled]="!signupForm.valid" mat-raised-button type="submit">Submit</button>
         </div>
     </form>
     <app-auth-link [signup]="true"></app-auth-link>

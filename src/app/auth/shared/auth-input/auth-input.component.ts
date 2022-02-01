@@ -23,4 +23,8 @@ export class AuthInputComponent implements OnInit {
     this.selected = true;
     this.inputElement.nativeElement.focus();
   }
+
+  errorControls() {
+    return this.control.errors && this.control.dirty && this.control.touched;
+  }
 }
