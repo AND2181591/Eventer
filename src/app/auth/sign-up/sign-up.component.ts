@@ -1,10 +1,44 @@
+import { transition, trigger, useAnimation } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { textAppear } from 'src/app/shared/animations/text-appear';
+import { MatchPassword } from '../validators/match-password';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.css']
+  styleUrls: ['./sign-up.component.css'], 
+  animations: [
+    trigger(
+      'appear', 
+      [
+        transition(
+          ':enter', 
+          [
+            useAnimation(textAppear, {
+              params: {
+                startOpacity: 0, 
+                time: '.2s', 
+                endOpacity: 1
+              }
+            })
+          ]
+        ), 
+        transition(
+          ':leave', 
+          [
+            useAnimation(textAppear, {
+              params: {
+                startOpacity: 1, 
+                time: '.2s', 
+                endOpacity: 0
+              }
+            })
+          ]
+        )
+      ]
+    )
+  ]
 })
 export class SignUpComponent implements OnInit {
 
@@ -23,14 +57,16 @@ export class SignUpComponent implements OnInit {
       Validators.minLength(4), 
       Validators.maxLength(20)
     ])
-  });
+  }, { validators: this.matchPassword.validate });
 
-  constructor() { }
+  constructor(
+    private matchPassword: MatchPassword
+  ) { }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    console.log(this.signupForm.value);
+    console.log(this.signupForm);
   }
 }

@@ -21,7 +21,7 @@ import { AuthLinkComponent } from './shared/auth-link/auth-link.component';
     AuthLinkComponent
   ],
   imports: [
-    CommonModule,
+    CommonModule, 
     MaterialModule, 
     FlexLayoutModule, 
     ReactiveFormsModule, 

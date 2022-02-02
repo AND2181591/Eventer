@@ -14,6 +14,17 @@
                 label="Confirm Pass" 
                 type="password"></app-auth-input>
         </div>
+
+        <div 
+            [@appear]
+            class="password-match" 
+            *ngIf="signupForm.errors && 
+                signupForm.get('confirmPassword')!.dirty && 
+                signupForm.get('confirmPassword')!.value.length >= 4">
+            <ng-container *ngIf="signupForm.errors['passwordsDontMatch']">
+                <h5>Passwords Need To Match</h5>
+            </ng-container>
+        </div>
         
         <div class="btn-container">
             <button [disabled]="!signupForm.valid" mat-raised-button type="submit">Submit</button>
