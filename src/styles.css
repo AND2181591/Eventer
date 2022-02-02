@@ -5,6 +5,12 @@
 
 body {
     --bkg-color: linear-gradient(120deg, rgba(161,255,221,1) 20%, rgba(45,176,255,1) 53%, rgba(167,223,255,1) 80%);
+    --header-link-color: rgba(29, 44, 52);
+    --card-color: rgba(255, 235, 160);
+    --input-color: rgba(244, 255, 250);
+    --input-text-color: rgba(57, 104, 133);
+    --btn-color: rgba(145,255,204,1);
+    --error-color: rgb(255, 0, 0);
 }
 
 body.dark-theme {
@@ -19,9 +25,13 @@ body.dark-theme {
 body,html {
     margin: 0;
     padding: 0;
-    font-family: 'Tangerine', serif;
 }
 
 body {
     background: var(--bkg-color);
+}
+
+.btn-submit {
+    background: var(--btn-color);
+    font-weight: 600;
 }

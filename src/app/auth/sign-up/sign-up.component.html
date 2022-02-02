@@ -16,18 +16,23 @@
         </div>
 
         <div 
-            [@appear]
+            [@text-appear]
             class="password-match" 
             *ngIf="signupForm.errors && 
                 signupForm.get('confirmPassword')!.dirty && 
                 signupForm.get('confirmPassword')!.value.length >= 4">
             <ng-container *ngIf="signupForm.errors['passwordsDontMatch']">
-                <h5>Passwords Need To Match</h5>
+                <h5 class="label-error">Passwords Need To Match</h5>
             </ng-container>
         </div>
         
         <div class="btn-container">
-            <button [disabled]="!signupForm.valid" mat-raised-button type="submit">Submit</button>
+            <button 
+                class="btn-submit" 
+                [disabled]="!signupForm.valid" 
+                mat-raised-button 
+                type="submit">Submit
+            </button>
         </div>
     </form>
     <app-auth-link [signup]="true"></app-auth-link>

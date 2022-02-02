@@ -1,21 +1,9 @@
 mat-card {
     width: 225px;
     padding: 30px 16px 20px;
-    background: #ffeba0;
-    animation: card-appear 1s ease-out;
+    background: var(--card-color);
 }
 
 :host ::ng-deep .mat-card {
     box-shadow: 3px 6px 6px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%);
-}
-
-@keyframes card-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }

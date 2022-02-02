@@ -9,7 +9,7 @@ import { textAppear } from 'src/app/shared/animations/text-appear';
   styleUrls: ['./auth-input.component.css'], 
   animations: [
     trigger(
-      'appear', 
+      'text-appear', 
       [
         transition(
           ':enter', 

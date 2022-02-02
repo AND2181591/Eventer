@@ -10,7 +10,7 @@ import { MatchPassword } from '../validators/match-password';
   styleUrls: ['./sign-up.component.css'], 
   animations: [
     trigger(
-      'appear', 
+      'text-appear', 
       [
         transition(
           ':enter', 
@@ -30,7 +30,7 @@ import { MatchPassword } from '../validators/match-password';
             useAnimation(textAppear, {
               params: {
                 startOpacity: 1, 
-                time: '.2s', 
+                time: '.1s', 
                 endOpacity: 0
               }
             })

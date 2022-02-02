@@ -18,16 +18,11 @@ form {
 
 .password-match h5 {
     margin: 0 0 0 8px;
-    color: #ff0000;
+    color: var(--error-color);
 }
 
 .btn-container {
     display: flex;
     justify-content: flex-end;
     padding: 5px 0;
-}
-
-button {
-    background: #91ffcc;
-    font-weight: 600;
 }

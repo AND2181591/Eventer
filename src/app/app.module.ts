@@ -6,6 +6,8 @@ import { MaterialModule } from './material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { SharedModule } from './shared/shared.module';
+
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -16,7 +18,8 @@ import { AppComponent } from './app.component';
     BrowserModule, 
     BrowserAnimationsModule, 
     MaterialModule, 
-    AppRoutingModule
+    AppRoutingModule, 
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
